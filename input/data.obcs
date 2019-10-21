@@ -1,0 +1,103 @@
+# ***************
+# Open boundaries
+# ***************
+ &OBCS_PARM01
+ OB_Jnorth = 600*-1,
+ OB_Iwest = 384*1,
+ OB_Ieast = 384*-1,
+#
+ OBCSfixTopo = .FALSE.,
+ useOBCSprescribe = .TRUE.,
+ useOBCSsponge = .TRUE.,
+ useSeaiceSponge = .TRUE.,
+#
+ OBNsFile = 'OBNsalt.bin',
+ OBNtFile = 'OBNtheta.bin',
+ OBNuFile = 'OBNuvel.bin',
+ OBNvFile = 'OBNvvel_corrected.bin',
+# OBNvFile = 'OBNvvel.bin',
+ OBNaFile = 'OBNarea.bin',
+ OBNhFile = 'OBNheff.bin',
+ OBNsnFile = 'OBNhsnow.bin',
+ OBNuiceFile = 'OBNuice.bin',
+ OBNviceFile = 'OBNvice.bin',
+#
+ OBWsFile = 'OBWsalt.bin',
+ OBWtFile = 'OBWtheta.bin',
+ OBWuFile = 'OBWuvel_corrected.bin',
+# OBWuFile = 'OBWuvel.bin',
+ OBWvFile = 'OBWvvel.bin',
+ OBWaFile = 'OBWarea.bin',
+ OBWhFile = 'OBWheff.bin',
+ OBWsnFile = 'OBWhsnow.bin',
+ OBWuiceFile = 'OBWuice.bin',
+ OBWviceFile = 'OBWvice.bin',
+#
+ OBEsFile = 'OBEsalt.bin',
+ OBEtFile = 'OBEtheta.bin',
+ OBEuFile = 'OBEuvel_corrected.bin',
+# OBEuFile = 'OBEuvel.bin',
+ OBEvFile = 'OBEvvel.bin',
+ OBEaFile = 'OBEarea.bin',
+ OBEhFile = 'OBEheff.bin',
+ OBEsnFile = 'OBEhsnow.bin',
+ OBEuiceFile = 'OBEuice.bin',
+ OBEviceFile = 'OBEvice.bin',
+ &
+# TRACER boundary condition
+ OBNptrFile(1)='OBNptr_0_600x50x12.bin',
+ OBEptrFile(1)='OBEptr_0_384x50x12.bin',
+ OBWptrFile(1)='OBWptr_0_384x50x12.bin',
+#
+ OBNptrFile(2)='OBNptr_0_600x50x12.bin',
+ OBEptrFile(2)='OBEptr_0_384x50x12.bin',
+ OBWptrFile(2)='OBWptr_0_384x50x12.bin',
+#
+ OBNptrFile(3)='OBNptr_0_600x50x12.bin',
+ OBEptrFile(3)='OBEptr_0_384x50x12.bin',
+ OBWptrFile(3)='OBWptr_0_384x50x12.bin',
+#
+ OBNptrFile(4)='OBNptr_0_600x50x12.bin',
+ OBEptrFile(4)='OBEptr_0_384x50x12.bin',
+ OBWptrFile(4)='OBWptr_0_384x50x12.bin',
+#
+ OBNptrFile(5)='OBNptr_0_600x50x12.bin',
+ OBEptrFile(5)='OBEptr_0_384x50x12.bin',
+ OBWptrFile(5)='OBWptr_0_384x50x12.bin',
+#
+ OBNptrFile(6)='OBNptr_0_600x50x12.bin',
+ OBEptrFile(6)='OBEptr_0_384x50x12.bin',
+ OBWptrFile(6)='OBWptr_0_384x50x12.bin',
+&
+
+#
+ &OBCS_PARM03
+ spongeThickness = 5,
+ Urelaxobcsinner = 432000.0,
+ Vrelaxobcsinner = 432000.0,
+ Urelaxobcsbound = 86400.0,
+ Vrelaxobcsbound = 86400.0,
+# spongeThickness = 10,
+# Urelaxobcsinner = 86400.0,
+# Vrelaxobcsinner = 86400.0,
+# Urelaxobcsbound = 0.0,
+# Vrelaxobcsbound = 0.0,
+ &
+#
+ &OBCS_PARM05
+ seaiceSpongeThickness = 5,
+ Arelaxobcsinner = 432000.0,
+ Hrelaxobcsinner = 432000.0,
+ SNrelaxobcsinner = 432000.0,
+ Arelaxobcsbound = 86400.0,
+ Hrelaxobcsbound = 86400.0,
+ SNrelaxobcsbound = 86400.0,
+# seaiceSpongeThickness = 10,
+# Arelaxobcsinner = 86400.0,
+# Hrelaxobcsinner = 86400.0,
+# SNrelaxobcsinner = 86400.0,
+# Arelaxobcsbound = 0.0,
+# Hrelaxobcsbound = 0.0,
+# SNrelaxobcsbound = 0.0,
+ &
+
